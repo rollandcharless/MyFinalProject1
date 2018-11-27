@@ -61,25 +61,26 @@
                 android:layout_margin="10dp"
                 android:text="NATIONAL DISASTER AND RISK REDUCTION AND MANAGEMENT COUNCIL (NDRRMC) HOTLINES"
                 android:textAlignment="textStart"
-                android:textColor="@color/colorPrimaryDark" />
+                android:textColor="@color/colorPrimaryDark"
+                android:textStyle="bold" />
 
-            <TextView
-                android:id="@+id/textView25"
+            <Button
+                android:id="@+id/button5"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="40dp"
-                android:layout_marginRight="10dp"
-                android:layout_marginBottom="5dp"
-                android:text="Trunklines: 911-5061 to 65" />
+                android:background="@color/colorbutton"
+                android:onClick="callTrunkline"
+                android:text="Trunklines: 911-5061 to 65"
+                android:textSize="12sp" />
 
-            <TextView
-                android:id="@+id/textView28"
+            <Button
+                android:id="@+id/button6"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="40dp"
-                android:layout_marginRight="10dp"
-                android:layout_marginBottom="10dp"
-                android:text="Operations Center: (02)911-1406, (02)912-2665, (02)912-5668, (02) 911-1873" />
+                android:background="@color/colorbutton"
+                android:onClick="callOperationCenter"
+                android:text="Operations Center: (02)911-1406, (02)912-2665, (02)912-5668, (02) 911-1873"
+                android:textSize="12sp" />
 
             <View
                 android:id="@+id/divider4"
@@ -93,25 +94,26 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:text="NDRRMC hotlines for Luzon"
-                android:textColor="@color/colorPrimaryDark" />
+                android:textColor="@color/colorPrimaryDark"
+                android:textStyle="bold" />
 
-            <TextView
-                android:id="@+id/textView34"
+            <Button
+                android:id="@+id/button7"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="40dp"
-                android:layout_marginRight="10dp"
-                android:layout_marginBottom="5dp"
-                android:text="Office of Civil Defense – National Capital Region: (02) 421-1918/ (02) 913-2786" />
+                android:background="@color/colorbutton"
+                android:onClick="callCivilDefenseNCR"
+                android:text="Office of Civil Defense – National Capital Region: (02) 421-1918/ (02) 913-2786"
+                android:textSize="12sp" />
 
-            <TextView
-                android:id="@+id/textView3asfdd"
+            <Button
+                android:id="@+id/button8"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="40dp"
-                android:layout_marginRight="10dp"
-                android:layout_marginBottom="5dp"
-                android:text="Office of Civil Defense – Region I: (072) 607-6528" />
+                android:background="@color/colorbutton"
+                android:onClick="h"
+                android:text="Office of Civil Defense – Region I: (072) 607-6528"
+                android:textSize="12sp" />
 
             <TextView
                 android:id="@+id/textView3asdsd"
