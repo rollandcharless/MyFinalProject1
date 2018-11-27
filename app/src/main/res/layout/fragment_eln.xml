@@ -111,7 +111,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@color/colorbutton"
-                android:onClick="h"
+                android:onClick="callCivilDefenseReg1"
                 android:text="Office of Civil Defense – Region I: (072) 607-6528"
                 android:textSize="12sp" />
 
