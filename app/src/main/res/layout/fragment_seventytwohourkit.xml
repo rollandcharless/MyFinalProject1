@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#D3D3D3"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context=".SeventyTwoHourKit">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -666,26 +667,6 @@
                 android:layout_height="match_parent"
                 android:orientation="horizontal">
 
-                <Button
-                    android:id="@+id/button"
-                    android:layout_width="wrap_content"
-                    android:layout_height="60dp"
-                    android:layout_margin="5dp"
-                    android:layout_weight="1"
-                    android:backgroundTint="@color/colorPrimary"
-                    android:ellipsize="end"
-                    android:text="SAVE"
-                    android:textColor="@color/ic_launcher_background" />
-
-                <Button
-                    android:id="@+id/button2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="60dp"
-                    android:layout_margin="5dp"
-                    android:layout_weight="1"
-                    android:backgroundTint="@color/colorPrimary"
-                    android:text="VIEW"
-                    android:textColor="@color/ic_launcher_background" />
             </LinearLayout>
 
             <Button
