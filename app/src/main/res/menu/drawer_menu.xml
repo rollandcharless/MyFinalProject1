@@ -7,46 +7,34 @@
 
 
         <item
-            android:id="@+id/nav_FirstAid"
-            android:icon="@drawable/ic_announcement"
+            android:id="@+id/nav_AllDocu"
+            android:icon="@drawable/baseline_folder_24"
             android:iconTint="@color/colorPrimary"
-            android:title="What is First Aid?" />
+            android:title="All Documents" />
 
         <item
-            android:id="@+id/nav_Injuries"
-            android:icon="@drawable/ic_face"
+            android:id="@+id/nav_MyDocu"
+            android:icon="@drawable/baseline_inbox_24"
             android:iconTint="@color/colorPrimary"
-            android:title="Kinds of Disaster" />
+            android:title="My Documents" />
 
         <item
-            android:id="@+id/nav_LiftsCarries"
-            android:icon="@drawable/ic_directions_run"
+            android:id="@+id/nav_InTran"
+            android:icon="@drawable/baseline_arrow_forward_24"
             android:iconTint="@color/colorPrimary"
-            android:title="Lifts and Carries" />
+            android:title="In Transit" />
 
         <item
-            android:id="@+id/nav_Bandage"
-            android:icon="@drawable/ic_local_hospital"
+            android:id="@+id/nav_Archive"
+            android:icon="@drawable/baseline_archive_24"
             android:iconTint="@color/colorPrimary"
-            android:title="Bandage Styles" />
+            android:title="Archive" />
 
         <item
-            android:id="@+id/nav_CPR"
-            android:icon="@drawable/ic_favorite"
+            android:id="@+id/nav_ManUse"
+            android:icon="@drawable/baseline_group_24"
             android:iconTint="@color/colorPrimary"
-            android:title="Perform CPR" />
-
-        <item
-            android:id="@+id/nav_HourKit"
-            android:icon="@drawable/ic_work"
-            android:iconTint="@color/colorPrimary"
-            android:title="72 Hour Kit Contents" />
-
-        <item
-            android:id="@+id/nav_LocalNo"
-            android:icon="@drawable/ic_local_phone"
-            android:iconTint="@color/colorPrimary"
-            android:title="Emergency Local Numbers" />
+            android:title="Manage Users" />
 
     </group>
 
@@ -55,14 +43,14 @@
         <menu>
             <item
                 android:id="@+id/nav_About"
-                android:icon="@drawable/ic_info24dp"
+                android:icon="@drawable/baseline_business_24"
                 android:iconTint="@color/colorPrimary"
-                android:title="About The App" />
+                android:title="About The Company" />
 
             <item
-                android:id="@+id/nav_Message"
-                android:icon="@drawable/ic_record_voice"
-                android:title="Message" />
+                android:id="@+id/nav_Logout"
+                android:icon="@drawable/baseline_power_settings_new_24"
+                android:title="Logout" />
         </menu>
     </item>
 
