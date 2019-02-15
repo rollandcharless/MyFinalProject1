@@ -7,34 +7,29 @@
 
 
         <item
-            android:id="@+id/nav_AllDocu"
+            android:id="@+id/nav_AllDocu_Encoder"
             android:icon="@drawable/baseline_folder_24"
             android:iconTint="@color/colorPrimary"
             android:title="All Documents" />
 
         <item
-            android:id="@+id/nav_MyDocu"
+            android:id="@+id/nav_MyDocu_Encoder"
             android:icon="@drawable/baseline_inbox_24"
             android:iconTint="@color/colorPrimary"
-            android:title="My Documents" />
+            android:title="My Document" />
+
 
         <item
-            android:id="@+id/nav_InTran"
+            android:id="@+id/nav_InTran_Encoder"
             android:icon="@drawable/baseline_arrow_forward_24"
             android:iconTint="@color/colorPrimary"
             android:title="In Transit" />
 
         <item
-            android:id="@+id/nav_Archive"
+            android:id="@+id/nav_Archive_Encoder"
             android:icon="@drawable/baseline_archive_24"
             android:iconTint="@color/colorPrimary"
             android:title="Archive" />
-
-        <item
-            android:id="@+id/nav_ManUse"
-            android:icon="@drawable/baseline_group_24"
-            android:iconTint="@color/colorPrimary"
-            android:title="Manage Users" />
 
     </group>
 
@@ -42,13 +37,13 @@
     <item android:title="Extras">
         <menu>
             <item
-                android:id="@+id/nav_About"
+                android:id="@+id/nav_About_Encoder"
                 android:icon="@drawable/baseline_business_24"
                 android:iconTint="@color/colorPrimary"
                 android:title="About The Company" />
 
             <item
-                android:id="@+id/nav_Logout"
+                android:id="@+id/nav_Logout_Encoder"
                 android:icon="@drawable/baseline_power_settings_new_24"
                 android:title="Logout" />
         </menu>

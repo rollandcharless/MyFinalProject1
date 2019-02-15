@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.ignacio.lorenz.prrcmobile">
 
-    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.CAMERA" />
 
     <application
         android:allowBackup="true"
@@ -11,9 +11,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".Barcode_Scanner"></activity>
+        <activity android:name=".ScanCodeActivity" />
         <activity
-
-            android:name="com.ignacio.lorenz.prrcmobile.MainActivity"
+            android:name=".MainActivity"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -21,9 +22,16 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".HomeActivity_SuperAdmin"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Login"
+            android:screenOrientation="portrait" />
 
-        <activity android:name="com.ignacio.lorenz.prrcmobile.HomeActivity" android:screenOrientation="portrait"></activity>
-        <activity android:name="com.ignacio.lorenz.prrcmobile.Login" android:screenOrientation="portrait"></activity>
+        <meta-data
+            android:name="co.google.android.gms.vision.DEPENDENCIES"
+            android:value="barcode" />
     </application>
 
 </manifest>

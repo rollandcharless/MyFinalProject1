@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "792565452268",
+    "firebase_url": "https://prrc-mobile.firebaseio.com",
+    "project_id": "prrc-mobile",
+    "storage_bucket": "prrc-mobile.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:792565452268:android:eee6398deda0631e",
+        "android_client_info": {
+          "package_name": "com.rapacon.igna.myfinalproject"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "792565452268-6uc9qt0n8aulqj9o5n1qd5snrss76pn7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA5bZDUErmICUvTixFUWAc9VTFYwgiR_is"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

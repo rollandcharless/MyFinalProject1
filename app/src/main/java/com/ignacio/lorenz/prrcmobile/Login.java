@@ -8,8 +8,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.app.AlertDialog;
-import android.widget.TextView;
-import android.widget.Toast;
 
 public class Login extends AppCompatActivity {
 
@@ -37,16 +35,16 @@ public class Login extends AppCompatActivity {
     //User Authentication
     private void validate(String userEmail, String userPassword) {
         if ((userEmail.equals("SuperAdmin")) && userPassword.equals("SuperAdmin")) {
-            Intent intent = new Intent(Login.this, HomeActivity.class);
+            Intent intent = new Intent(Login.this, HomeActivity_SuperAdmin.class);
             startActivity(intent);
         }   else if ((userEmail.equals("Encoder")) && userPassword.equals("Encoder")) {
-            Intent intent = new Intent(Login.this, HomeActivity.class);
+            Intent intent = new Intent(Login.this, HomeActivity_Encoder.class);
             startActivity(intent);
         }  else if ((userEmail.equals("Admin")) && userPassword.equals("Admin")) {
-            Intent intent = new Intent(Login.this, HomeActivity.class);
+            Intent intent = new Intent(Login.this, HomeActivity_SuperAdmin.class);
             startActivity(intent);
         }  else if ((userEmail.equals("Viewer")) && userPassword.equals("Viewer")) {
-            Intent intent = new Intent(Login.this, HomeActivity.class);
+            Intent intent = new Intent(Login.this, HomeActivity_SuperAdmin.class);
             startActivity(intent);
         }
 
