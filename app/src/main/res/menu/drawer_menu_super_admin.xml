@@ -32,10 +32,10 @@
             android:title="Archive" />
 
         <item
-            android:id="@+id/nav_ManUse_Super_Admin"
+            android:id="@+id/nav_ScanQR_Super_Admin"
             android:icon="@drawable/baseline_group_24"
             android:iconTint="@color/colorPrimary"
-            android:title="Manage User" />
+            android:title="Scan QR Code" />
 
     </group>
 

@@ -2,32 +2,33 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/topLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:keepScreenOn="true"
+    android:background="#00ff00"
     android:orientation="vertical"
     tools:context=".Barcode_Scanner">
 
-    <Button
-        android:id="@+id/btnScan"
-        android:layout_width="135dp"
-        android:layout_height="wrap_content"
-        android:layout_margin="150dp"
-        android:background="@color/design_default_color_primary"
-        android:text="Scan QR Code"
-        android:textAlignment="center"
-        android:textColor="@android:color/white"
-        android:textSize="16sp" />
-
-
-    <TextView
-        android:id="@+id/result_text"
+    <fragment
+        android:id="@+id/barcode_scanner"
+        android:name="info.androidhive.barcode.BarcodeReader"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:layout_marginTop="2dp"
-        android:text="Result"
-        android:textColor="@color/design_default_color_primary_dark"
-        android:textSize="24sp" />
+        android:layout_height="match_parent"
+        app:auto_focus="true"
+        app:use_flash="false" />
+
+    <info.androidhive.barcode.ScannerOverlay
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#44000000"
+        app:line_color="#7323DC"
+        app:line_speed="6"
+        app:line_width="4"
+        app:square_height="200"
+        app:square_width="200"/>
+
+
 
 
 </LinearLayout>

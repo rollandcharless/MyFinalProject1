@@ -1,5 +1,4 @@
 package com.ignacio.lorenz.prrcmobile;
-
 import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
@@ -62,9 +61,9 @@ public class HomeActivity_SuperAdmin extends AppCompatActivity implements Naviga
                         new Archive()).commit();
                 break;
 
-            case R.id.nav_ManUse_Super_Admin:
+            case R.id.nav_ScanQR_Super_Admin:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container_super_admin,
-                        new ManageUser()).commit();
+                        new ScanQR()).commit();
                 break;
 
             case R.id.nav_About_Super_Admin:
@@ -92,6 +91,9 @@ public class HomeActivity_SuperAdmin extends AppCompatActivity implements Naviga
         }
     }
 }
+
+
+
 
 
 
