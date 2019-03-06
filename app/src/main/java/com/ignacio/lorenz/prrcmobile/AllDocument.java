@@ -1,4 +1,9 @@
 package com.ignacio.lorenz.prrcmobile;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.content.SharedPreferences;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -8,15 +13,24 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import com.ami.fundapter.BindDictionary;
+import com.ami.fundapter.FunDapter;
+import com.ami.fundapter.extractors.StringExtractor;
+import com.ami.fundapter.fields.StringField;
+import com.kosalgeek.android.json.JsonConverter;
+import com.kosalgeek.asynctask.AsyncResponse;
+import com.kosalgeek.asynctask.PostResponseAsyncTask;
+
+import java.util.ArrayList;
+
 public class AllDocument extends Fragment {
 
-    ListView listView;
+    private ArrayList<ClassListItems> userList;
+    private ListView listView;
+    private FunDapter<ClassListItems> adapter;
 
-    private static final String dbConnection = "http://localhost/android/all_docus.php";
 
-
-
-    public AllDocument(){
+    public AllDocument() {
 
     }
 
@@ -25,21 +39,44 @@ public class AllDocument extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
         View view = inflater.inflate(R.layout.fragment_all_docu, container, false);
+        listView =(ListView)view.findViewById(R.id.listView);
 
-        String[] docuList = {"Document 1",
-        "Document 2", "Document 3"};
+        PostResponseAsyncTask taskRead = new PostResponseAsyncTask(getContext(),  new AsyncResponse(){
+            @Override
+            public void processFinish(String s)
 
+            {
+                userList = new JsonConverter<ClassListItems>().toArrayList(s, ClassListItems.class);
+                BindDictionary<ClassListItems> dict = new BindDictionary<ClassListItems>();
 
-        ListView listView = (ListView) view.findViewById(R.id.mainMenu);
+                dict.addStringField(R.id.textSubject, new StringExtractor<ClassListItems>() {
+                    @Override
+                    public String getStringValue(ClassListItems item, int position) {
+                        return "" + item.subject;
+                    }
+                });
 
+                dict.addStringField(R.id.textStatus, new StringExtractor<ClassListItems>() {
+                    @Override
+                    public String getStringValue(ClassListItems item, int position) {
+                        return "" + item.statuscode_id;
+                    }
+                });
+                dict.addStringField(R.id.textDate, new StringExtractor<ClassListItems>() {
+                    @Override
+                    public String getStringValue(ClassListItems item, int position) {
+                        return "" + item.final_action_date;
+                    }
+                });
+                adapter = new FunDapter<ClassListItems>(getActivity(), userList, R.layout.fragment_all_docu_list, dict);
+                listView.setAdapter(adapter);
+            }
+        });
 
-
-        ArrayAdapter<String> listViewAdapter = new ArrayAdapter<String>(getActivity(),
-                android.R.layout.simple_list_item_1,docuList);
-
-        listView.setAdapter(listViewAdapter);
+        taskRead.execute("http://10.0.2.2:80/android/all_docus.php");
         return view;
+        }
 
     }
+    
 
-}
