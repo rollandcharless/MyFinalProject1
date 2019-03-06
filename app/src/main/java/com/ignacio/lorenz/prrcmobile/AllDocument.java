@@ -73,7 +73,7 @@ public class AllDocument extends Fragment {
             }
         });
 
-        taskRead.execute("http://10.0.2.2:80/android/all_docus.php");
+        taskRead.execute("http://192.168.1.7/android/all_docus.php");
         return view;
         }
 

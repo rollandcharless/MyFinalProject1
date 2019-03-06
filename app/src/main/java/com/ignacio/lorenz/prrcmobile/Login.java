@@ -78,7 +78,7 @@ public class Login extends AppCompatActivity {
                 //Use 10.0.3.2 for GenyMotion
                 //Use 10.0.2.2:80 for Android native Emulator
                 //If you're going to use a real Android device, use your laptop's IP Address (type 'ipconfig' in CMD for details)
-                loginTask.execute("http://10.0.2.2:80/android/login.php");
+                loginTask.execute("http://192.168.1.7/android/login.php");
             }
         });
     }
